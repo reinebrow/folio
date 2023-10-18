@@ -36,5 +36,13 @@
 
 	<script>
 		alert('sample');
+		$.ajax({
+			type: "POST",
+			url: "ajax.php",
+			data: "ajax=true",
+			success: function(data) {
+				alert(data);
+			}
+		});
 	</script>
 </html>
