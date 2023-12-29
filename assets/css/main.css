@@ -435,6 +435,9 @@ select.custom::after {font:var(--fonticon); content: "\f063" !important; float:r
   .project .col {height: 10rem; min-height: unset !important; max-height:unset !important; flex:1 calc(50% - var(--colgap));}
   .project.masonry .row .col:not(:nth-child(even)) {min-height: 12rem;}
   .form-control {padding-inline:.5rem;}
+
+  .project .col .options {bottom:0 !important;}
+  #modalproject .arrows {float:none !important; top:85%;}
 }
 
 @media (max-width: 320px) {
