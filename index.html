@@ -2,54 +2,117 @@
 <html lang="en">
 	<script src="./header.js" data-baseurl="./" data-title="ulan - home"></script>
 	<body class="">
-		<main role="main" class="container-fluid">
+		<main role="main" class="container-fluid index">
 
-			<section class="container-fluid">
+			<section class="container-fluid hero">
 				<div class="container filter">
 					<div class="row">
-						<div class="col col-md-6 col-10">
-							<select class="form-control custom filter-show" title="Show items">
-								<option value="all">Show all projects</option>
-								<option value="web">Web designs</option>
-								<option value="grx">Graphic designs</option>
-							</select>
-						</div>
-						<div class="col col-md-1 offset-md-4 col-2">
-							<div class="form-control filter-btn filter-sort">
-								<span class="filter-sort-asc" data-src="dateasc" title="Newest to oldest upload"><i class="fa fa-calendar-plus"></i><i class="fa fa-arrow-down"></i></span>
-								<span class="filter-sort-desc d-none" data-src="datedesc" title="Oldest to newest upload"><i class="fa fa-calendar-minus"></i><i class="fa fa-arrow-up"></i></span>
-							</div>
-						</div>
-						<div class="col col-md-1 col-2 d-md-block d-none">
-							<div class="form-control filter-btn filter-view">
-							<span class="filter-view-grid" title="Masonry view"><i class="material-symbols-outlined">browse</i></span>
-								<span class="filter-view-masonry d-none" title="Grid view"><i class="material-symbols-outlined">grid_view</i></span>
-							</div>
+						<div class="col col-12">
+							<img src="./assets/images/site_logo.svg" class="w-100 w-md-70 my-5" />
+							<h3>ARTS & WORKS</h3>
+							<h5 class="mt-3">PORTFOLIO SELECTION BY REINE COMEDES</h5>
+							<div class="socials mt-5 text-center">
+		            <a href="https://facebook.com/reinebrow" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+		            <a href="https://instagram.com/reinebrow" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram"></i></a>
+		            <a href="https://behance.net/reinecomedes" target="_blank" data-toggle="tooltip" data-placement="top" title="Behance"><i class="fab fa-behance"></i></a>
+		            <a href="https://linkedin.com/in/reinecomedes" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+								<a href="mailto:reinecomedes@gmail.com" data-toggle="tooltip" data-placement="top" title="Send Email"><i class="fa fa-envelope"></i></a>
+		          </div>
+							<a href="#works"><img src="./assets/images/scroll.gif" style="width: 3rem;" class="mt-5" /></a>
 						</div>
 					</div>
 				</div>
 			</section>
 
-			<section class="container-fluid pt-0">
-				<div class="container project masonry show-all">
-					<div class="row">
-						<!--div class="col"><img src="./projects/w_01.jpg" loading="lazy"/><span><i class="far fa-heart"></i>12</span></div-->
+
+			<section class="bg-custom7" id="works">
+				<div class="container-fluid">
+					<div class="container filter">
+						<div class="row">
+							<div class="col col-12">
+								<h1 class="sub mb-5">Portfolio<span>Works & Projects</span></h1>
+							</div>
+						</div>
+
+						<div class="row">
+							<div class="col col-md-6 col-10">
+								<select class="form-control custom filter-show" title="Show items">
+									<option value="all">Show all projects</option>
+									<option value="web">Web designs</option>
+									<option value="grx">Graphic designs</option>
+								</select>
+							</div>
+							<div class="col col-md-1 offset-md-4 col-2">
+								<div class="form-control filter-btn filter-sort">
+									<span class="filter-sort-asc" data-src="dateasc" title="Newest to oldest upload"><i class="fa fa-calendar-plus"></i><i class="fa fa-arrow-down"></i></span>
+									<span class="filter-sort-desc d-none" data-src="datedesc" title="Oldest to newest upload"><i class="fa fa-calendar-minus"></i><i class="fa fa-arrow-up"></i></span>
+								</div>
+							</div>
+							<div class="col col-md-1 col-2 d-md-block d-none">
+								<div class="form-control filter-btn filter-view">
+								<span class="filter-view-grid" title="Masonry view"><i class="material-symbols-outlined">browse</i></span>
+									<span class="filter-view-masonry d-none" title="Grid view"><i class="material-symbols-outlined">grid_view</i></span>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+
+				<div class="container-fluid pt-0">
+					<div class="container project masonry show-all">
+						<div class="row">
+							<!--div class="col"><img src="./projects/w_01.jpg" loading="lazy"/><span><i class="far fa-heart"></i>12</span></div-->
+						</div>
+					</div>
+				</div>
+
+				<div class="modal fade" id="modalproject">
+					<div class='arrows'><span class='prev'><i class='fa fa-chevron-left'></i></span><span class='next'><i class='fa fa-chevron-right'></i></span></div>
+					<span class="modal-close fa fa-times" data-dismiss="modal"></span>
+					<div class="modal-dialog modal-xl" role="document">
+						<div class="modal-content">
+							<div class="modal-body"></div>
+						</div>
 					</div>
 				</div>
 			</section>
 
-
-			<div class="modal fade" id="modalproject">
-				<div class='arrows'><span class='prev'><i class='fa fa-chevron-left'></i></span><span class='next'><i class='fa fa-chevron-right'></i></span></div>
-				<span class="modal-close fa fa-times" data-dismiss="modal"></span>
-				<div class="modal-dialog modal-xl" role="document">
-					<div class="modal-content">
-						<div class="modal-body"></div>
+			<section class="container-fluid" id="about">
+				<div class="container filter">
+					<div class="row pull-middle">
+						<div class="col col-md-5 col-12">
+							<!-- <img src="./assets/images/av01.png" class="w-100" /> -->
+							<div id="carouselExampleControls" class="carousel slide carousel-fade" data-ride="carousel">
+							  <div class="carousel-inner">
+							    <div class="carousel-item active">
+							      <img class="d-block w-100" src="./assets/images/av01.png">
+							    </div>
+									<div class="carousel-item">
+							      <img class="d-block w-100" src="./assets/images/av02.png">
+							    </div>
+							    <div class="carousel-item">
+							      <img class="d-block w-100" src="./assets/images/av05.png">
+							    </div>
+							  </div>
+							</div>
+						</div>
+						<div class="col col-md-7 col-12 pl-md-5">
+							<h1 class="sub mt-md-0 mt-5">About me<span>Get to know more</span></h1>
+							<p>I'm Reine (Rain), a web and graphic designer from Mindoro, Philippines. My design journey began in high school with a passion for arts and crafts. Now, I specialize in static websites using <strong>HTML, CSS, Bootstrap</strong>, and a bit of <strong>PHP</strong> and <strong>MySQL</strong> for more dynamic projects. I also create materials for digital and printing. In my free time, I enjoy mock-painting and embracing my <em>"plantito"</em> side during the days. Music from Ariana Grande, BTS, Taylor Swift, Blackpink, and Little Mix keeps me company while I work. I love singing and dancing, especially to K-pop tunes.</p>
+							<p>That's a snapshot of my life. I hope you've gotten to know me a bit better! I'd love to connect, so feel free to reach out through my social media accounts or drop me an email. Looking forward to hearing from you!</p>
+							<div class="socials mt-5">
+		            <a href="https://facebook.com/reinebrow" target="_blank" data-toggle="tooltip" data-placement="top" title="Facebook"><i class="fab fa-facebook-square"></i></a>
+		            <a href="https://instagram.com/reinebrow" target="_blank" data-toggle="tooltip" data-placement="top" title="Instagram"><i class="fab fa-instagram"></i></a>
+		            <a href="https://behance.net/reinecomedes" target="_blank" data-toggle="tooltip" data-placement="top" title="Behance"><i class="fab fa-behance"></i></a>
+		            <a href="https://linkedin.com/in/reinecomedes" target="_blank" data-toggle="tooltip" data-placement="top" title="LinkedIn"><i class="fab fa-linkedin"></i></a>
+								<a href="mailto:reinecomedes@gmail.com" data-toggle="tooltip" data-placement="top" title="Send Email"><i class="fa fa-envelope"></i></a>
+		          </div>
+						</div>
 					</div>
 				</div>
 			</div>
 
-			<script src="./footer.js?v=2"></script>
+			<script src="./footer.js"></script>
 		</main>
 	</body>
 </html>

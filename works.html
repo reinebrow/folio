@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en">
+	<script src="./header.js" data-baseurl="./" data-title="ulan - works"></script>
+	<body class="">
+		<main role="main" class="container-fluid works">
+
+			<section class="container-fluid">
+				<div class="container filter">
+					<div class="row">
+						<div class="col col-md-6 col-10">
+							<select class="form-control custom filter-show" title="Show items">
+								<option value="all">Show all projects</option>
+								<option value="web">Web designs</option>
+								<option value="grx">Graphic designs</option>
+							</select>
+						</div>
+						<div class="col col-md-1 offset-md-4 col-2">
+							<div class="form-control filter-btn filter-sort">
+								<span class="filter-sort-asc" data-src="dateasc" title="Newest to oldest upload"><i class="fa fa-calendar-plus"></i><i class="fa fa-arrow-down"></i></span>
+								<span class="filter-sort-desc d-none" data-src="datedesc" title="Oldest to newest upload"><i class="fa fa-calendar-minus"></i><i class="fa fa-arrow-up"></i></span>
+							</div>
+						</div>
+						<div class="col col-md-1 col-2 d-md-block d-none">
+							<div class="form-control filter-btn filter-view">
+							<span class="filter-view-grid" title="Masonry view"><i class="material-symbols-outlined">browse</i></span>
+								<span class="filter-view-masonry d-none" title="Grid view"><i class="material-symbols-outlined">grid_view</i></span>
+							</div>
+						</div>
+					</div>
+				</div>
+			</section>
+
+			<section class="container-fluid pt-0">
+				<div class="container project masonry show-all">
+					<div class="row">
+						<!--div class="col"><img src="./projects/w_01.jpg" loading="lazy"/><span><i class="far fa-heart"></i>12</span></div-->
+					</div>
+				</div>
+			</section>
+
+
+			<div class="modal fade" id="modalproject">
+				<div class='arrows'><span class='prev'><i class='fa fa-chevron-left'></i></span><span class='next'><i class='fa fa-chevron-right'></i></span></div>
+				<span class="modal-close fa fa-times" data-dismiss="modal"></span>
+				<div class="modal-dialog modal-xl" role="document">
+					<div class="modal-content">
+						<div class="modal-body"></div>
+					</div>
+				</div>
+			</div>
+
+			<script src="./footer.js?v=2"></script>
+		</main>
+	</body>
+</html>
