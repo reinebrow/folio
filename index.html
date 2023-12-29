@@ -7,8 +7,8 @@
 			<section class="container-fluid">
 				<div class="container filter">
 					<div class="row">
-						<div class="col col-md-6 col-6">
-							<select class="form-control custom" title="Show items">
+						<div class="col col-md-6 col-10">
+							<select class="form-control custom filter-show" title="Show items">
 								<option value="all">Show all projects</option>
 								<option value="web">Web designs</option>
 								<option value="grx">Graphic designs</option>
@@ -16,17 +16,11 @@
 						</div>
 						<div class="col col-md-1 offset-md-4 col-2">
 							<div class="form-control filter-btn filter-sort">
-								<span class="filter-sort-asc" title="Newest to oldest upload"><i class="fa fa-calendar-plus"></i><i class="fa fa-arrow-down"></i></span>
-								<span class="filter-sort-desc d-none" title="Oldest to newest upload"><i class="fa fa-calendar-minus"></i><i class="fa fa-arrow-up"></i></span>
+								<span class="filter-sort-asc" data-src="dateasc" title="Newest to oldest upload"><i class="fa fa-calendar-plus"></i><i class="fa fa-arrow-down"></i></span>
+								<span class="filter-sort-desc d-none" data-src="datedesc" title="Oldest to newest upload"><i class="fa fa-calendar-minus"></i><i class="fa fa-arrow-up"></i></span>
 							</div>
 						</div>
-						<!--div class="d-none col col-md-1 col-2">
-							<div class="form-control filter-btn filter-fave">
-								<span class="filter-fave-asc" title="Most favorite to least"><i class="fa fa-heart"></i><i class="fa fa-arrow-down"></i></span>
-								<span class="filter-fave-desc d-none" title="Least favorite to most"><i class="fa fa-heart"></i><i class="fa fa-arrow-up"></i></span>
-							</div>
-						</div-->
-						<div class="col col-md-1 col-2">
+						<div class="col col-md-1 col-2 d-md-block d-none">
 							<div class="form-control filter-btn filter-view">
 							<span class="filter-view-grid" title="Masonry view"><i class="material-symbols-outlined">browse</i></span>
 								<span class="filter-view-masonry d-none" title="Grid view"><i class="material-symbols-outlined">grid_view</i></span>
@@ -37,18 +31,11 @@
 			</section>
 
 			<section class="container-fluid pt-0">
-				<div class="container project masonry">
+				<div class="container project masonry show-all">
 					<div class="row">
 						<!--div class="col"><img src="./projects/w_01.jpg" loading="lazy"/><span><i class="far fa-heart"></i>12</span></div-->
 					</div>
 				</div>
-				<!--div class="container">
-					<div class="row more text-center">
-						<div class="col-12">
-							<button class="btn btn-secondary btn-more">See more</button>
-						</div>
-					</div>
-				</div-->
 			</section>
 
 

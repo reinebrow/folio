@@ -35,8 +35,9 @@ $(document).ready(function() {
   }
 
   // Function to fetch and display file information
-  async function getFileInformation(dateorder) {
+  async function getFileInformation(dateorder,fshow) {
     try {
+
       $(".project .row").empty();
       $(".project .div-btn-more").remove();
       const response = await fetch(`https://api.github.com/repos/${repo}/contents/${directoryPath}`);
@@ -46,6 +47,7 @@ $(document).ready(function() {
       // Fetch all commit dates in parallel
       const commitDates = await Promise.all(data.map(async (item) => await getCommitHistoryForFile(item.name)));
 
+      //alert(dateorder);
       // Sort data based on commit dates in descending order
       data.sort((a, b) => {
         const dateA = commitDates[data.indexOf(a)];
@@ -69,6 +71,9 @@ $(document).ready(function() {
             rend = ctr;
           }
           //files.push([`${fileName}`,[`${lastModified}`],[`${newfilepath}`]]);
+
+          if ((fshow == "web") && (fileproj == "g")) {continue;}
+          else if ((fshow == "grx") && (fileproj == "w")) {continue;}
 
           const message = `File: ${fileName}\nLast Modified: ${lastModified}\nPath: ${newfilepath}`;
           $(".project .row").append(`<div class="col ${fileproj} ${fileshow}" title="${fileName}"><img src=".${newfilepath}" onclick="openproject('${newfilepath}')" loading="lazy"/><div class="options"><label>${formattedDate}</label><span><i class="far fa-heart"></i>${fileheart}</span></div></div>`);
@@ -105,7 +110,7 @@ $(document).ready(function() {
   // }
 
   // Call the function to get file information
-  getFileInformation("datedesc");
+  getFileInformation("datedesc","all");
 
 
   $(".modal .modal-close").click(function() {
@@ -113,13 +118,16 @@ $(document).ready(function() {
   });
 
   $(".filter-btn.filter-sort > span").click(function() {
+    var filshow = $(".filter-show").val();
+    var filorder = $(this).attr("data-src");
+
     if ($(this).hasClass("filter-sort-asc")) {
       $(this).addClass("d-none").siblings(".filter-sort-desc").removeClass("d-none");
-      getFileInformation("dateasc");
+      getFileInformation(filorder,filshow);
     }
     else {
       $(this).addClass("d-none").siblings(".filter-sort-asc").removeClass("d-none");
-      getFileInformation("datedesc");
+      getFileInformation(filorder,filshow);
     }
   });
 
@@ -141,6 +149,36 @@ $(document).ready(function() {
   });
 
 
+  $(".filter-show").change(function() {
+    var fshow = $(this).val();
+    var filorder = $(".filter-btn > span:not(.d-none)").attr("data-src");
+
+    getFileInformation(filorder,fshow);
+
+    // $(".project[class*='show-']").removeClass(function(index, className) {
+    //   const matchedClass = className.match(/\bshow-\S*/);
+    //   return (matchedClass || []).join(' ');
+    // });
+    // $(".project").addClass("show-"+fshow);
+
+  });
+
+
+  $(document).keydown(function(e) {
+    if (e.keyCode === 27) {
+      $("#modalproject").modal("hide");
+    }
+
+    if ($('#modalproject').is(':visible')) {
+      if (e.repeat) {return;}
+      if (e.keyCode === 37) {
+        $("#modalproject .arrows > span.prev").click();
+      } else if (e.keyCode === 39) {
+        $("#modalproject .arrows > span.next").click();
+      }
+    }
+
+  });
 
 });
 
@@ -158,6 +196,8 @@ function openproject(val) {
   $("#modalproject").modal("show");
   if (prevsrc == undefined) { $("#modalproject .arrows .prev").addClass("d-hide"); }
   if (nextsrc == undefined) { $("#modalproject .arrows .next").addClass("d-hide"); }
+
+
 }
 
 
